@@ -37,14 +37,14 @@ while game_is_on:
         ball.bounce_paddle()
 
     if ball.xcor() > 400:
-        ball.reset()
+        ball.reset_ball()
         scoreboard.l_score += 1
         scoreboard.clear()
         scoreboard.write_scores()
         ball.bounce_paddle()
 
     if ball.xcor() < -400:
-        ball.reset()
+        ball.reset_ball()
         scoreboard.r_score += 1
         scoreboard.clear()
         scoreboard.write_scores()
@@ -56,3 +56,4 @@ while game_is_on:
         scoreboard.write("GAME OVER", align="center", font=("Courier", 30, "normal"))
 
 screen.exitonclick()
+
